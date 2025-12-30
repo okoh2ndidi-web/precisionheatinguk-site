@@ -2,60 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Precision Heating UK</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Precision Heating UK – Heating and HVAC specialists" />
+  <title>Precision Heating UK | Plumbing, Gas & Heat Pumps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Precision Heating UK provides professional plumbing, gas cooker, boiler and heat pump services. Gas Safe Registered Mechanical Engineer serving the UK." />
+
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: linear-gradient(135deg, #0b1020, #050816);
+      background: #0b1f33;
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .box {
-      max-width: 520px;
-      padding: 2.5rem 2rem;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.05);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
-    h1 {
-      margin-bottom: 0.8rem;
-      font-size: 2rem;
-    }
-    p {
-      color: #cfd2ff;
       line-height: 1.6;
     }
-    .badge {
-      margin-top: 1.5rem;
+
+    header {
+      background: linear-gradient(135deg, #0b1f33, #102a44);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
       display: inline-block;
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      background: rgba(255,165,0,0.15);
-      border: 1px solid rgba(255,165,0,0.4);
-      color: #ffb84d;
+      margin: 0.5rem;
+      padding: 0.9rem 1.4rem;
+      border-radius: 6px;
+      background: #ff8c1a;
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #ffb347;
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #132f4c;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #081624;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffb347;
+      text-decoration: none;
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Precision Heating UK</h1>
+
+  <!-- HERO SECTION -->
+  <header>
+    <h1>Professional Plumbing, Gas & Heat Pump Services You Can Rely On</h1>
     <p>
-      Our website is currently being upgraded.<br />
-      Please check back soon.
+      Gas Safe Registered • Mechanical Engineer (BEng Hons)<br>
+      Serving homes, landlords & builders across the UK
     </p>
+
+    <a class="btn" href="tel:07404370995">Call: 07404 370995</a>
+    <a class="btn" href="mailto:info@precisionheatinguk.co.uk">Email Us</a>
+  </header>
+
+  <!-- SERVICES -->
+  <section>
+    <h2>Our Services</h2>
+
+    <div class="services">
+      <div class="card">
+        <h3>🔧 Plumbing Services</h3>
+        <p>
+          General plumbing repairs, pipework, leak detection,
+          hot & cold water systems, and domestic plumbing solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔥 Gas & Boiler Services</h3>
+        <p>
+          Boiler installation, servicing and repairs, gas safety checks,
+          central heating systems, and gas cooker & hob installations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>♨️ Heat Pumps & Renewables</h3>
+        <p>
+          Heat pump installation, system design, heat loss calculations,
+          smart heating controls, and energy efficiency upgrades.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Precision Heating UK</h2>
     <p>
-      For enquiries, contact us at:<br />
-      <strong>info@precisionheatinguk.co.uk</strong>
+      Precision Heating UK is led by <strong>Engr. Ose Osemwengie</strong>,
+      a <strong>Gas Safe Registered Mechanical Engineer (BEng Hons)</strong>.
+      All work is carried out in line with UK gas safety legislation
+      and best engineering practice.
     </p>
-    <span class="badge">Site hosted on your own Vercel</span>
-  </div>
+
+    <p>
+      We provide safe, efficient and professional solutions —
+      whether it’s plumbing repairs, gas cooker installation,
+      boiler upgrades, or modern heat pump systems.
+    </p>
+  </section>
+
+  <!-- GAS SAFETY -->
+  <section>
+    <h2>Stay Gas Safe</h2>
+    <p>
+      Annual servicing saves lives. We carry out certified gas safety
+      inspections for boilers, gas cookers and heating systems to ensure
+      your home remains safe and compliant.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Need a Qualified Engineer?</h2>
+    <p>
+      Call or email today for professional advice and reliable service.
+    </p>
+
+    <p>
+      📞 <strong>07404 370995</strong><br>
+      ✉️ <strong>info@precisionheatinguk.co.uk</strong><br>
+      🌐 <strong>https://www.precisionheatinguk.co.uk</strong>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>Precision Heating UK</strong><br>
+      Professional Plumbing, Gas & Energy Solutions
+    </p>
+
+    <p>
+      Gas Safe Registered<br>
+      © Precision Heating UK
+    </p>
+  </footer>
+
 </body>
 </html>
