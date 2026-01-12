@@ -1,94 +1,452 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Precision Heating UK</title>
-  <meta name="description" content="Contact Precision Heating UK for plumbing, gas, boilers, cookers/hobs, heat pumps and CP12." />
-  <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f7fb;color:#0b1220}
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-    .topbar{position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid #e9eef7}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0aa6a6,#3dd6d6);display:grid;place-items:center;color:#042b2b;font-weight:900}
-    .brand small{display:block;font-weight:600;color:#48607a}
-    .links{display:flex;gap:18px;align-items:center}
-    .links a{font-weight:650;color:#20324a}
-    .links a:hover{color:#0a6f6f}
-    .cta{background:#0aa6a6;color:#fff;font-weight:750;padding:10px 14px;border-radius:999px;white-space:nowrap}
-    header{padding:44px 0}
-    h1{margin:0 0 10px;font-size:34px}
-    .sub{margin:0 0 22px;color:#51657f}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
-    .card{background:#fff;border:1px solid #e8eef7;border-radius:16px;box-shadow:0 20px 60px rgba(15,30,60,.08);padding:18px}
-    .btn{display:inline-block;border-radius:10px;padding:12px 14px;font-weight:800}
-    .btn.primary{background:#ff8c1a;color:#1b1204}
-    .btn.ghost{border:1px solid #d5dfef;color:#20324a}
-    footer{margin-top:30px;background:#081624;color:#cfe2ff;padding:28px 0}
-    footer a{color:#ffb347}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.links{display:none}}
-  </style>
+  <meta name="description"
+    content="Contact Precision Heating UK for plumbing, gas, boilers, and emergency repairs across East London." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(214.3 31.8% 91.4%)",
+            background: "hsl(0 0% 100%)",
+            foreground: "hsl(222.2 84% 4.9%)",
+            primary: {
+              DEFAULT: "hsl(222.2 47.4% 11.2%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            secondary: {
+              DEFAULT: "hsl(180 87% 34%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            accent: {
+              DEFAULT: "hsl(32 100% 55%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            destructive: {
+              DEFAULT: "hsl(0 84.2% 60.2%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            muted: {
+              DEFAULT: "hsl(210 40% 96.1%)",
+              foreground: "hsl(215.4 16.3% 46.9%)",
+            },
+            card: {
+              DEFAULT: "hsl(0 0% 100%)",
+              foreground: "hsl(222.2 84% 4.9%)",
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-  <div class="topbar">
-    <div class="wrap">
-      <div class="nav">
-        <div class="brand">
-          <div class="logo">PH</div>
-          <div>Precision Heating UK<small>Heating & Energy Solutions</small></div>
-        </div>
-        <div class="links">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <a class="cta" href="contact.html">Get in touch!</a>
-      </div>
-    </div>
-  </div>
 
-  <header>
-    <div class="wrap">
-      <h1>Contact</h1>
-      <p class="sub">For quotes, bookings and urgent repairs, contact us today.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3 style="margin:0 0 10px;">Call or email</h3>
-          <p style="margin:0 0 10px;"><strong>Phone:</strong> 07404 370995</p>
-          <p style="margin:0 0 10px;"><strong>Email:</strong> info@precisionheatinguk.co.uk</p>
-          <p style="margin:0 0 10px;"><strong>Website:</strong> https://www.precisionheatinguk.co.uk</p>
-
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
-            <a class="btn primary" href="tel:07404370995">Call now</a>
-            <a class="btn ghost" href="mailto:info@precisionheatinguk.co.uk">Send email</a>
+<body class="min-h-screen bg-background font-sans text-foreground overflow-x-hidden">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-blue-400 flex items-center justify-center text-white font-black text-xl shadow-lg">
+            PH
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-primary">Precision Heating UK</span>
+            <span class="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Heating & Energy
+              Solutions</span>
           </div>
         </div>
 
-        <div class="card">
-          <h3 style="margin:0 0 10px;">Coverage Areas</h3>
-          <p class="sub" style="margin-bottom:12px;">East London and surrounding boroughs:</p>
-          <ul style="margin:0;padding-left:18px;color:#3f5570">
-            <li>East London</li>
-            <li>Barking & Dagenham</li>
-            <li>Newham</li>
-            <li>Redbridge</li>
-            <li>Havering</li>
-          </ul>
-          <p class="sub" style="margin-top:14px;">Not listed? Contact us to confirm availability.</p>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="font-semibold text-sm hover:text-secondary transition-colors">Home</a>
+          <a href="services.html" class="font-semibold text-sm hover:text-secondary transition-colors">Services</a>
+          <a href="about.html" class="font-semibold text-sm hover:text-secondary transition-colors">About</a>
+          <a href="contact.html" class="font-semibold text-sm text-secondary transition-colors">Contact</a>
+          <a href="contact.html"
+            class="bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md active:scale-95">Get
+            in touch!</a>
+        </div>
+
+        <div class="md:hidden">
+          <button class="p-2 text-primary" id="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+          </button>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <footer>
-    <div class="wrap">
-      <div><strong>Precision Heating UK</strong> — Professional Plumbing, Gas & Energy Solutions</div>
-      <div style="margin-top:8px;">🌐 <a href="https://www.precisionheatinguk.co.uk">www.precisionheatinguk.co.uk</a></div>
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center bg-zinc-900 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80"
+        alt="Contact Us" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+      <div data-aos="fade-up">
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-heading font-black text-white mb-6 leading-tight">
+          Get In Touch
+        </h1>
+        <p class="text-lg sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
+          Ready to book a service or need emergency assistance? We're here to help 24/7.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-24 bg-background">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+
+        <!-- Contact Information -->
+        <div data-aos="fade-right" class="space-y-12">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-heading font-black mb-6 text-primary">Contact Information</h2>
+            <p class="text-lg text-muted-foreground leading-relaxed">
+              Get in touch with our Gas Safe registered engineer. Available for emergency callouts and flexible
+              scheduling across East London.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <!-- phone -->
+            <div
+              class="bg-white p-8 rounded-[2.5rem] border border-red-100 shadow-sm transition-all hover:shadow-lg flex items-start gap-6 border-2">
+              <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 flex-shrink-0">
+                <i data-lucide="phone" class="w-7 h-7"></i>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-black text-sm uppercase tracking-widest text-primary mb-2">Emergency / WhatsApp</h3>
+                <p class="text-2xl font-heading font-black text-red-600 mb-2 whitespace-nowrap">07404 370 995</p>
+                <p class="text-xs text-muted-foreground font-bold mb-4">Available 24/7 for urgent repairs</p>
+                <div class="flex flex-wrap gap-2">
+                  <a href="https://wa.me/447404370995" target="_blank"
+                    class="px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-colors">Message
+                    WhatsApp</a>
+                  <a href="tel:07404370995"
+                    class="px-4 py-2 border border-red-200 text-red-600 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-red-50 transition-colors">Call
+                    Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm transition-all hover:shadow-lg flex items-start gap-6">
+              <div
+                class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent flex-shrink-0">
+                <i data-lucide="mail" class="w-7 h-7"></i>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-black text-sm uppercase tracking-widest text-primary mb-2">Email Us</h3>
+                <p class="text-lg font-bold text-primary mb-2 break-all italic">info@precisionheatinguk.co.uk</p>
+                <p class="text-xs text-muted-foreground font-bold mb-4">We respond within an hour</p>
+                <a href="mailto:info@precisionheatinguk.co.uk"
+                  class="text-xs text-accent font-black uppercase tracking-widest underline decoration-2 underline-offset-4">Send
+                  Email</a>
+              </div>
+            </div>
+
+            <!-- Areas -->
+            <div
+              class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm transition-all hover:shadow-lg flex items-start gap-6">
+              <div
+                class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary flex-shrink-0">
+                <i data-lucide="map-pin" class="w-7 h-7"></i>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-black text-sm uppercase tracking-widest text-primary mb-2">Service Areas</h3>
+                <p class="text-sm text-muted-foreground font-bold leading-relaxed">
+                  East London • Barking & Dagenham • Newham • Redbridge • Havering
+                </p>
+                <p class="text-xs text-muted-foreground mt-2 italic font-bold">Fast response across the area</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-10 border-t border-border mt-12">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black text-sm uppercase tracking-widest text-primary">Gas Safe Registered</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                </div>
+                <span class="font-bold text-xs text-muted-foreground italic">Response time: ~30 min for
+                  emergencies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div data-aos="fade-left">
+          <div class="bg-white p-10 rounded-[3.5rem] border border-border shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2">
+            </div>
+
+            <div class="flex items-center gap-4 mb-10">
+              <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary">
+                <i data-lucide="calendar" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-2xl font-heading font-black text-primary">Book a Service</h3>
+            </div>
+
+            <form action="https://formspree.io/f/mqayenrw" method="POST" class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Full Name
+                    *</label>
+                  <input type="text" name="name" required placeholder="Noghayin Osemwengie"
+                    class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium">
+                </div>
+                <div class="space-y-2">
+                  <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Phone Number
+                    *</label>
+                  <input type="tel" name="phone" required placeholder="07404 370 995"
+                    class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium">
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Email Address
+                  *</label>
+                <input type="email" name="email" required placeholder="info@precisionheatinguk.co.uk"
+                  class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium">
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Service
+                    Required *</label>
+                  <select name="service" required
+                    class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium appearance-none">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="plumbing">Plumbing Repair</option>
+                    <option value="boiler-install">Boiler Installation</option>
+                    <option value="boiler-service">Boiler Servicing</option>
+                    <option value="gas-safety">CP12 Gas Safety Certificate</option>
+                    <option value="emergency">Emergency Repair</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Urgency
+                    *</label>
+                  <select name="urgency" required
+                    class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium appearance-none">
+                    <option value="" disabled selected>Select urgency</option>
+                    <option value="emergency">Emergency (Same Day)</option>
+                    <option value="urgent">Urgent (24 hours)</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Property Address
+                  *</label>
+                <input type="text" name="address" required placeholder="East London Postcode"
+                  class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium">
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Message</label>
+                <textarea name="message" rows="4" placeholder="How can we help you?"
+                  class="w-full px-5 py-4 bg-zinc-50 border border-border rounded-2xl focus:outline-none focus:ring-4 focus:ring-secondary/10 focus:border-secondary transition-all text-sm font-medium resize-none"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-secondary hover:bg-secondary/90 text-white px-8 py-5 rounded-2xl font-black shadow-xl hover:shadow-secondary/20 transition-all active:scale-[0.98] text-lg flex items-center justify-center gap-3">
+                <i data-lucide="send" class="w-5 h-5"></i> Send Booking Request
+              </button>
+
+              <p class="text-[10px] text-center text-muted-foreground font-bold uppercase tracking-widest">We respond
+                within an hour to confirm your appointment.</p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Options Section -->
+  <section class="py-24 bg-zinc-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-heading font-black mb-4 text-primary">Need Immediate Help?</h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Choose the fastest way to reach our expert engineer
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Emergency Call -->
+        <div
+          class="bg-white p-10 rounded-[2.5rem] border-2 border-red-100 shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up">
+          <div
+            class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-8 text-red-600 group-hover:scale-110 transition-transform">
+            <i data-lucide="phone" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black text-primary mb-4">Emergency Call</h3>
+          <p class="text-sm text-muted-foreground mb-8">For urgent repairs and gas leaks requiring immediate attention.
+          </p>
+          <a href="tel:07404370995"
+            class="inline-flex w-full items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-xl font-black uppercase tracking-widest text-xs animate-pulse">
+            Call 07404 370 995
+          </a>
+        </div>
+
+        <!-- WhatsApp Chat -->
+        <div
+          class="bg-white p-10 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mx-auto mb-8 text-green-600 group-hover:scale-110 transition-transform">
+            <i data-lucide="message-square" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black text-primary mb-4">WhatsApp Chat</h3>
+          <p class="text-sm text-muted-foreground mb-8">Quick questions, quotes, and photo/video diagnostic help.</p>
+          <a href="https://wa.me/447404370995" target="_blank"
+            class="inline-flex w-full items-center justify-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-colors">
+            Start WhatsApp Chat
+          </a>
+        </div>
+
+        <!-- Email Support -->
+        <div
+          class="bg-white p-10 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 text-accent group-hover:scale-110 transition-transform">
+            <i data-lucide="mail" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black text-primary mb-4">Email Support</h3>
+          <p class="text-sm text-muted-foreground mb-8">Detailed inquiries, quote requests, and project documentation.
+          </p>
+          <a href="mailto:info@precisionheatinguk.co.uk"
+            class="inline-flex w-full items-center justify-center gap-2 border-2 border-accent text-accent hover:bg-accent hover:text-white px-6 py-4 rounded-xl font-black uppercase tracking-widest text-xs transition-colors">
+            Send Email Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-border pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+        <div class="max-w-xs">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-white font-black">PH</div>
+            <span class="font-heading font-black text-xl tracking-tight text-primary">Precision Heating UK</span>
+          </div>
+          <p class="text-muted-foreground text-sm leading-relaxed">
+            Professional Plumbing, Gas & Energy Solutions. Gas Safe Registered and fully insured for your peace of mind.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-12 lg:gap-24">
+          <div>
+            <h4 class="font-black text-xs uppercase tracking-widest mb-6 text-primary">Navigation</h4>
+            <ul class="space-y-4 text-sm font-bold text-muted-foreground">
+              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="about.html" class="hover:text-secondary transition-colors">About</a></li>
+              <li><a href="contact.html" class="hover:text-secondary transition-colors text-secondary">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-black text-xs uppercase tracking-widest mb-6 text-primary">Contact</h4>
+            <ul class="space-y-4 text-sm font-bold text-muted-foreground">
+              <li class="flex items-center gap-2 italic">07404 370 995</li>
+              <li class="flex items-center gap-2 break-all italic text-xs break-all italic">
+                info@precisionheatinguk.co.uk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-10 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2 px-4 py-2 bg-zinc-50 rounded-full border border-zinc-100 italic">
+          <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i>
+          <span class="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Gas Safe Registered</span>
+        </div>
+        <p class="text-[10px] font-bold text-muted-foreground uppercase tracking-widest uppercase">© 2026 Precision
+          Heating UK — All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out'
+    });
+
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle (shim)
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        alert('Navigation menu is optimized for desktop. Action buttons are functional on all devices.');
+      });
+    }
+  </script>
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68d90da5e3c067194ffda30e/1j67tqkgs';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
+
 </html>

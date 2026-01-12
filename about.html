@@ -1,128 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Precision Heating UK</title>
-  <meta name="description" content="About Precision Heating UK – Gas Safe Registered Mechanical Engineer (BEng Hons)." />
-  <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f7fb;color:#0b1220}
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-    .topbar{position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid #e9eef7}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0aa6a6,#3dd6d6);display:grid;place-items:center;color:#042b2b;font-weight:900}
-    .brand small{display:block;font-weight:600;color:#48607a}
-    .links{display:flex;gap:18px;align-items:center}
-    .links a{font-weight:650;color:#20324a}
-    .links a:hover{color:#0a6f6f}
-    .cta{background:#0aa6a6;color:#fff;font-weight:750;padding:10px 14px;border-radius:999px;white-space:nowrap}
-    header{padding:44px 0}
-    h1{margin:0 0 10px;font-size:34px}
-    .sub{margin:0 0 22px;color:#51657f}
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
-    .card{background:#fff;border:1px solid #e8eef7;border-radius:16px;box-shadow:0 20px 60px rgba(15,30,60,.08);padding:18px}
-    ul{margin:0;padding-left:18px;color:#3f5570}
-    footer{margin-top:30px;background:#081624;color:#cfe2ff;padding:28px 0}
-    footer a{color:#ffb347}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.links{display:none}}
-  </style>
+  <meta name="description"
+    content="About Precision Heating UK – Gas Safe Registered Mechanical Engineer (BEng Hons)." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            border: "hsl(214.3 31.8% 91.4%)",
+            background: "hsl(0 0% 100%)",
+            foreground: "hsl(222.2 84% 4.9%)",
+            primary: {
+              DEFAULT: "hsl(222.2 47.4% 11.2%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            secondary: {
+              DEFAULT: "hsl(180 87% 34%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            accent: {
+              DEFAULT: "hsl(32 100% 55%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            destructive: {
+              DEFAULT: "hsl(0 84.2% 60.2%)",
+              foreground: "hsl(210 40% 98%)",
+            },
+            muted: {
+              DEFAULT: "hsl(210 40% 96.1%)",
+              foreground: "hsl(215.4 16.3% 46.9%)",
+            },
+            card: {
+              DEFAULT: "hsl(0 0% 100%)",
+              foreground: "hsl(222.2 84% 4.9%)",
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-  <div class="topbar">
-    <div class="wrap">
-      <div class="nav">
-        <div class="brand">
-          <div class="logo">PH</div>
-          <div>Precision Heating UK<small>Heating & Energy Solutions</small></div>
-        </div>
-        <div class="links">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <a class="cta" href="contact.html">Get in touch!</a>
-      </div>
-    </div>
-  </div>
 
-  <header>
-    <div class="wrap">
-      <h1>About Precision Heating UK</h1>
-      <p class="sub">Professional plumbing, gas and energy solutions delivered with an engineer’s attention to detail.</p>
-
-      <div class="grid">
-        <div class="card">
-          <p>
-            Precision Heating UK is led by <strong>Engr. Ose Osemwengie</strong>, a
-            <strong>Gas Safe Registered</strong> engineer and <strong>Mechanical Engineer (BEng Hons)</strong>.
-            We support homeowners, landlords and builders with safe workmanship, clear communication, and reliable results.
-          </p>
-          <p>
-            Our approach is simple: diagnose properly, explain clearly, and carry out work in accordance with UK gas safety
-            regulations and best practice.
-          </p>
+<body class="min-h-screen bg-background font-sans text-foreground overflow-x-hidden">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-blue-400 flex items-center justify-center text-white font-black text-xl shadow-lg">
+            PH
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-primary">Precision Heating UK</span>
+            <span class="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Heating & Energy
+              Solutions</span>
+          </div>
         </div>
 
-        <div class="card">
-          <h3 style="margin:0 0 10px;">Why choose us</h3>
-          <ul>
-            <li>Gas Safe Registered engineer</li>
-            <li>Engineering-led solutions (not guesswork)</li>
-            <li>Clear quotes and honest advice</li>
-            <li>Tidy workmanship and respect for your home</li>
-            <li>Support for landlords (CP12 compliance)</li>
-          </ul>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="font-semibold text-sm hover:text-secondary transition-colors">Home</a>
+          <a href="services.html" class="font-semibold text-sm hover:text-secondary transition-colors">Services</a>
+          <a href="about.html" class="font-semibold text-sm text-secondary transition-colors">About</a>
+          <a href="contact.html" class="font-semibold text-sm hover:text-secondary transition-colors">Contact</a>
+          <a href="contact.html"
+            class="bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md active:scale-95">Get
+            in touch!</a>
+        </div>
+
+        <div class="md:hidden">
+          <button class="p-2 text-primary" id="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+          </button>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <footer>
-    <div class="wrap">
-      <div><strong>Precision Heating UK</strong> — Professional Plumbing, Gas & Energy Solutions</div>
-      <div style="margin-top:8px;">🌐 <a href="https://www.precisionheatinguk.co.uk">www.precisionheatinguk.co.uk</a></div>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center bg-zinc-900 overflow-hidden">
+    <div class="absolute inset-0 z-0 text-white">
+      <img src="https://www.warmzilla.co.uk/wp-content/uploads/2022/10/Boiler-2.jpg" alt="About Precision Heating"
+        class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+      <div data-aos="fade-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-heading font-black text-white mb-6 leading-tight">
+          About Precision Heating <br class="hidden lg:block"> & Energy Solutions
+        </h1>
+        <p class="text-lg sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
+          Professional plumbing, gas and energy solutions delivered with an engineer’s attention to detail.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-24 bg-background">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-3xl md:text-5xl font-heading font-black mb-8 leading-tight text-primary">Our Story</h2>
+          <div class="space-y-6 text-muted-foreground text-lg leading-relaxed">
+            <p>
+              Precision Heating UK is led by <strong class="text-primary font-black">Engr. Noghayin Osemwengie</strong>,
+              a
+              <strong class="text-secondary font-black">Gas Safe Registered</strong> engineer and <strong
+                class="text-secondary font-black">Mechanical Engineer (BEng Hons)</strong>.
+            </p>
+            <p>
+              We support homeowners, landlords and builders across East London with safe workmanship, clear
+              communication, and reliable results.
+            </p>
+            <p>
+              Our approach is simple: diagnose properly, explain clearly, and carry out work in accordance with UK gas
+              safety
+              regulations and best practice.
+            </p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-2 gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="font-black text-primary leading-tight">BEng Hons</p>
+                <p class="text-xs text-muted-foreground font-bold uppercase tracking-wider">Mechanical Engineering</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="font-black text-primary leading-tight">Gas Safe</p>
+                <p class="text-xs text-muted-foreground font-bold uppercase tracking-wider">Reg: 972332</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-aos="fade-left">
+          <div class="bg-zinc-50 p-10 rounded-[3.5rem] border border-border">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-8 animate-bounce">
+              <i data-lucide="flame" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-heading font-black mb-6">Our Mission</h3>
+            <p class="text-muted-foreground leading-relaxed mb-10 italic">
+              "To provide safe, reliable, and efficient heating solutions that keep families warm and comfortable while
+              delivering exceptional customer service."
+            </p>
+
+            <div class="space-y-5 border-t border-border pt-10">
+              <h4 class="text-sm font-black uppercase tracking-widest text-primary">Our Values</h4>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                  <span class="font-bold text-sm">Safety first in everything we do</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                  <span class="font-bold text-sm">Transparent and honest pricing</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                  <span class="font-bold text-sm">Quality workmanship guaranteed</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                  <span class="font-bold text-sm">Exceptional customer service</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="py-24 bg-zinc-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-heading font-black mb-4 text-primary">Why Choose Us</h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Fully qualified, certified, and insured for your complete peace of mind
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up">
+          <div
+            class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-secondary group-hover:scale-110 transition-transform">
+            <i data-lucide="shield" class="h-8 w-8"></i>
+          </div>
+          <h3 class="font-black text-lg mb-3">Gas Safe Registered</h3>
+          <p class="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-4">Registration No: 972332</p>
+          <span
+            class="px-3 py-1 bg-zinc-100 text-zinc-600 rounded-full text-[10px] font-black uppercase tracking-widest">Verified</span>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-accent group-hover:scale-110 transition-transform">
+            <i data-lucide="award" class="h-8 w-8"></i>
+          </div>
+          <h3 class="font-black text-lg mb-3 text-nowrap">BEng (Hon) Mechanical</h3>
+          <p class="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-4">HVAC Specialists</p>
+          <span
+            class="px-3 py-1 border border-accent text-accent rounded-full text-[10px] font-black uppercase tracking-widest">Certified</span>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary group-hover:scale-110 transition-transform">
+            <i data-lucide="settings" class="h-8 w-8"></i>
+          </div>
+          <h3 class="font-black text-lg mb-3">UKAS Accredited</h3>
+          <p class="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-4">Engineering-led Advice</p>
+          <span
+            class="px-3 py-1 border border-primary text-primary rounded-full text-[10px] font-black uppercase tracking-widest">Accredited</span>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-xl transition-all text-center group"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-red-600 group-hover:scale-110 transition-transform">
+            <i data-lucide="wrench" class="h-8 w-8"></i>
+          </div>
+          <h3 class="font-black text-lg mb-3">Tidy Workmanship</h3>
+          <p class="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-4">Respect for your home</p>
+          <span
+            class="px-3 py-1 border border-red-600 text-red-600 rounded-full text-[10px] font-black uppercase tracking-widest">Guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Founder -->
+  <section class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-heading font-black mb-4 text-primary">Meet Our Founder</h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Experienced professional dedicated to keeping your home warm and safe
+        </p>
+      </div>
+
+      <div class="flex justify-center" data-aos="zoom-in">
+        <div class="bg-zinc-50 p-10 rounded-[3.5rem] border border-border max-w-md w-full text-center relative group">
+          <div
+            class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-all">
+          </div>
+
+          <div class="w-40 h-40 rounded-full overflow-hidden mx-auto mb-8 ring-8 ring-white shadow-2xl relative z-10">
+            <img src="photo passport.jpg" alt="Noghayin Osemwengie" class="w-full h-full object-cover">
+          </div>
+
+          <h3 class="text-2xl font-heading font-black text-primary mb-2 relative z-10">Noghayin Osemwengie</h3>
+          <p class="text-secondary font-black text-sm uppercase tracking-widest mb-6 relative z-10">Founder & Lead
+            Engineer</p>
+
+          <p class="text-muted-foreground text-sm leading-relaxed mb-8 relative z-10">
+            With many years of experience in heating solutions. Gas Safe registered and Mechanical Engineer (BEng Hons).
+            Fast response across East London. Trusted by homeowners and landlords alike.
+          </p>
+
+          <div class="flex items-center justify-center gap-4 relative z-10">
+            <span
+              class="px-4 py-2 bg-white rounded-xl text-[10px] font-black uppercase tracking-widest border border-border">Gas
+              Safe</span>
+            <span
+              class="px-4 py-2 bg-white rounded-xl text-[10px] font-black uppercase tracking-widest border border-border">BEng
+              Hons</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="py-24 bg-zinc-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-heading font-black mb-4 text-primary">Service Areas</h2>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Proudly serving customers across East London with reliable heating and gas services
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm flex flex-col items-center text-center group"
+          data-aos="fade-up">
+          <div
+            class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black mb-4">East London</h3>
+          <p class="text-muted-foreground text-sm">Complete coverage across East London with fast response and same-day
+            service available.</p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm flex flex-col items-center text-center group"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black mb-4">Barking & Dagenham</h3>
+          <p class="text-muted-foreground text-sm">Serving Barking, Dagenham and all surrounding areas with emergency
+            and scheduled services.</p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-[2.5rem] border border-border shadow-sm flex flex-col items-center text-center group"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-heading font-black mb-4 whitespace-nowrap">Newham & Redbridge</h3>
+          <p class="text-muted-foreground text-sm">Professional heating services throughout Newham, Redbridge, and
+            nearby Havering.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center" data-aos="fade-up">
+        <p class="text-muted-foreground mb-10 text-lg">Don't see your area listed? Contact us to check availability in
+          your specific location.</p>
+        <a href="contact.html"
+          class="inline-flex items-center gap-3 bg-secondary hover:bg-secondary/90 text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:shadow-secondary/20 transition-all active:scale-95 text-lg">
+          <i data-lucide="map-pin" class="w-6 h-6"></i> Check Service Area
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-primary text-white relative overflow-hidden">
+    <!-- Abstract background elements -->
+    <div
+      class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-secondary/10 rounded-full blur-3xl">
+    </div>
+    <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl">
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-heading font-black mb-8 leading-tight" data-aos="fade-up">
+        Ready to Work With Us?
+      </h2>
+      <p class="text-lg text-zinc-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+        Experience the Precision Heating difference. Professional service, transparent pricing, and guaranteed
+        satisfaction.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html"
+          class="bg-secondary hover:bg-secondary/90 text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:shadow-secondary/20 transition-all active:scale-95 text-lg flex items-center justify-center gap-3">
+          <i data-lucide="check-circle" class="h-6 w-6"></i> Get Free Quote
+        </a>
+        <a href="tel:07404370995"
+          class="bg-white text-primary hover:bg-red-600 hover:text-white px-10 py-5 rounded-2xl font-black shadow-xl transition-all active:scale-95 text-lg flex items-center justify-center gap-3 animate-pulse">
+          <i data-lucide="phone" class="h-6 w-6"></i> Emergency Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-border pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+        <div class="max-w-xs">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-white font-black">PH</div>
+            <span class="font-heading font-black text-xl tracking-tight text-primary">Precision Heating UK</span>
+          </div>
+          <p class="text-muted-foreground text-sm leading-relaxed">
+            Professional Plumbing, Gas & Energy Solutions. Gas Safe Registered and fully insured for your peace of mind.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-12 lg:gap-24">
+          <div>
+            <h4 class="font-black text-xs uppercase tracking-widest mb-6 text-primary">Navigation</h4>
+            <ul class="space-y-4 text-sm font-bold text-muted-foreground">
+              <li><a href="index.html" class="hover:text-secondary transition-colors">Home</a></li>
+              <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="about.html" class="hover:text-secondary transition-colors text-secondary">About</a></li>
+              <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-black text-xs uppercase tracking-widest mb-6 text-primary">Contact</h4>
+            <ul class="space-y-4 text-sm font-bold text-muted-foreground">
+              <li class="flex items-center gap-2 italic">07404 370995</li>
+              <li class="flex items-center gap-2 break-all italic">info@precisionheatinguk.co.uk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-10 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2 px-4 py-2 bg-zinc-50 rounded-full border border-zinc-100 italic">
+          <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i>
+          <span class="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Gas Safe Registered</span>
+        </div>
+        <p class="text-[10px] font-bold text-muted-foreground uppercase tracking-widest uppercase">© 2026 Precision
+          Heating UK — All rights reserved.</p>
+      </div>
     </div>
   </footer>
-</body><section style="padding:60px 0;text-align:center;">
-  <h1>Meet Our Founder</h1>
-  <p style="color:#5f657f;margin-bottom:30px;">
-    Experienced professional dedicated to keeping your home warm and safe
-  </p>
 
-  <div style="
-    max-width:360px;
-    margin:0 auto;
-    background:#ffffff;
-    border-radius:16px;
-    padding:30px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.08);
-  ">
-    <img
-      src="photo passport.jpg"
-      alt="Noghayin Osemwengie – Founder & Lead Engineer"
-      style="
-        width:160px;
-        height:160px;
-        border-radius:50%;
-        object-fit:cover;
-        border:4px solid #e6eef6;
-        margin-bottom:16px;
-      "
-    >
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out'
+    });
 
-    <h3 style="margin:10px 0 4px;">Noghayin Osemwengie</h3>
-    <p style="color:#0aa6a6;font-weight:600;margin-bottom:10px;">
-      Founder & Lead Engineer
-    </p>
+    // Initialize Lucide Icons
+    lucide.createIcons();
 
-    <p style="font-size:14px;color:#5f657f;">
-      Gas Safe Registered • Mechanical Engineer (BEng Hons)<br>
-      Trusted by homeowners and landlords across East London.
-    </p>
-  </div>
-</section>
+    // Mobile menu toggle (shim)
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        alert('Navigation menu is optimized for desktop. Action buttons are functional on all devices.');
+      });
+    }
+  </script>
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68d90da5e3c067194ffda30e/1j67tqkgs';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</body>
 
 </html>
