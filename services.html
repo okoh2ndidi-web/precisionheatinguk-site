@@ -100,6 +100,24 @@
         </div>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-border absolute w-full left-0 top-20 shadow-xl z-40">
+      <div class="px-4 pt-4 pb-6 space-y-2">
+        <a href="index.html"
+          class="block px-4 py-3 text-base font-bold text-foreground hover:text-secondary hover:bg-secondary/5 rounded-xl transition-all">Home</a>
+        <a href="services.html"
+          class="block px-4 py-3 text-base font-bold text-foreground hover:text-secondary hover:bg-secondary/5 rounded-xl transition-all">Services</a>
+        <a href="about.html"
+          class="block px-4 py-3 text-base font-bold text-foreground hover:text-secondary hover:bg-secondary/5 rounded-xl transition-all">About</a>
+        <a href="contact.html"
+          class="block px-4 py-3 text-base font-bold text-foreground hover:text-secondary hover:bg-secondary/5 rounded-xl transition-all">Contact</a>
+        <a href="contact.html"
+          class="block px-4 py-3 text-base font-bold text-center bg-secondary text-white rounded-xl mt-4 shadow-lg hover:shadow-secondary/20 transition-all">Get
+          in touch!</a>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -378,11 +396,16 @@
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Mobile menu toggle (shim)
+    // Mobile menu toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
-    if (mobileBtn) {
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
       mobileBtn.addEventListener('click', () => {
-        alert('Navigation menu is optimized for desktop. Action buttons are functional on all devices.');
+        mobileMenu.classList.toggle('hidden');
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileBtn.innerHTML = `<i data-lucide="${isHidden ? 'menu' : 'x'}"></i>`;
+        lucide.createIcons();
       });
     }
   </script>
